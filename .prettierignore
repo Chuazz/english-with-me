@@ -1,0 +1,16 @@
+**/.git
+**/.svn
+**/.hg
+
+.turbo
+
+.vscode
+
+node_modules
+build
+Debug
+
+__tests__
+
+**/mobile/android
+**/mobile/ios

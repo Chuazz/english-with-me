@@ -1,0 +1,24 @@
+{
+	"name": "english-with-me",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev:mobile": "turbo dev:mobile",
+		"lint": "turbo lint",
+		"format": "prettier --write --config ./.prettierrc ./",
+		"gen-package": "chmod +x ./scripts/generate-package.sh && bash ./scripts/generate-package.sh"
+	},
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"turbo": "^2.3.1",
+		"typescript": "5.5.4"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "yarn@1.22.22",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
+}
