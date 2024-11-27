@@ -4,6 +4,7 @@
 	"scripts": {
 		"build": "turbo build",
 		"dev:mobile": "turbo dev:mobile",
+		"dev:package": "turbo dev:package",
 		"lint": "turbo lint",
 		"format": "prettier --write --config ./.prettierrc ./",
 		"gen-package": "chmod +x ./scripts/generate-package.sh && bash ./scripts/generate-package.sh"

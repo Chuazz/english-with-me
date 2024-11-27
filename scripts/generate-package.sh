@@ -11,6 +11,9 @@ packageContent() {
 	"types": "./dist/index.d.ts",
     "scripts": {
         "dev": "tsc --watch",
+        "dev:package": "yarn dev",
+        "dev:mobile": "yarn dev",
+        "dev:web": "yarn dev",
         "build": "tsc"
     },
     "dependencies": {

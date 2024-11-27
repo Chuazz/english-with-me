@@ -17,6 +17,10 @@
 			"cache": false,
 			"persistent": true,
 			"env": ["ANDROID_HOME"]
+		},
+		"dev:package": {
+			"cache": false,
+			"persistent": true
 		}
 	}
 }
