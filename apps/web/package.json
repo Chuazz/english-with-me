@@ -9,18 +9,41 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"lodash.merge": "^4.6.2",
+		"next": "15.0.3",
 		"react": "19.0.0-rc-66855b96-20241106",
-		"react-dom": "19.0.0-rc-66855b96-20241106",
-		"next": "15.0.3"
+		"react-dom": "19.0.0-rc-66855b96-20241106"
 	},
 	"devDependencies": {
-		"typescript": "^5",
+		"@repo/eslint-config": "*",
+		"@types/lodash.merge": "^4.6.9",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
+		"eslint": "^9.15.0",
+		"eslint-config-neon": "^0.2.3",
 		"postcss": "^8",
 		"tailwindcss": "^3.4.1",
-		"eslint": "^8",
-		"eslint-config-next": "15.0.3"
+		"typescript": "^5"
+	},
+	"resolutions": {
+		"eslint-config-neon/common": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/angular": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/astro": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/cypress": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/edge": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/jsx": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/jsx-a11y": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/module": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/no-deprecated": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/prettier": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/react": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/rxjs": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/rxjs-angular": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/svelte": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/svelte-typescript": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/typescript": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/vue": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/vue-typescript": "npm:@favware/skip-dependency@latest"
 	}
 }

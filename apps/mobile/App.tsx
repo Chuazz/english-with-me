@@ -23,6 +23,7 @@ type SectionProps = PropsWithChildren<{
 
 function Section({ children, title }: SectionProps): React.JSX.Element {
 	const isDarkMode = useColorScheme() === 'dark';
+	const isDarkMode2 = useColorScheme() === 'dark';
 
 	return (
 		<View style={styles.sectionContainer}>
@@ -60,8 +61,8 @@ function App(): React.JSX.Element {
 	return (
 		<SafeAreaView style={backgroundStyle}>
 			<StatusBar
-				barStyle={isDarkMode ? 'light-content' : 'dark-content'}
 				backgroundColor={backgroundStyle.backgroundColor}
+				barStyle={isDarkMode ? 'light-content' : 'dark-content'}
 			/>
 			<ScrollView
 				contentInsetAdjustmentBehavior='automatic'

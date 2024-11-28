@@ -4,6 +4,7 @@
 		"declaration": true,
 		"declarationMap": true,
 		"esModuleInterop": true,
+		"checkJs": false,
 		"allowJs": true,
 		"incremental": false,
 		"isolatedModules": true,
@@ -16,5 +17,6 @@
 		"skipLibCheck": true,
 		"strict": true,
 		"target": "ES2022"
-	}
+	},
+	"exclude": ["node_modules", "dist", "build"]
 }

@@ -3,7 +3,6 @@
 	"version": "0.0.0",
 	"private": true,
 	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
 	"scripts": {
 		"dev": "tsc --watch",
 		"dev:package": "yarn dev",
@@ -12,13 +11,13 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@repo/typescript-config": "*"
+		"@repo/typescript-config": "*",
+		"lodash.merge": "^4.6.2"
 	},
 	"devDependencies": {
-		"eslint": "^9.15.0",
-		"eslint-plugin-react": "^7.37.2",
-		"eslint-plugin-react-hooks": "5.1.0-rc-eb3ad065-20240822",
-		"typescript": "^5.7.2",
-		"typescript-eslint": "^8.16.0"
-	}
+		"@types/lodash.merge": "^4.6.9",
+		"eslint-config-neon": "^0.2.3",
+		"typescript": "^5.7.2"
+	},
+	"resolutions": {}
 }

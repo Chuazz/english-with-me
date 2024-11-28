@@ -15,9 +15,9 @@
 	},
 	"dependencies": {
 		"@react-native/gradle-plugin": "^0.76.3",
-		"eslint": "^9.15.0",
 		"react": "18.3.1",
-		"react-native": "0.76.3"
+		"react-native": "0.76.3",
+		"lodash.merge": "^4.6.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.25.2",
@@ -31,11 +31,13 @@
 		"@react-native/metro-config": "0.76.3",
 		"@react-native/typescript-config": "0.76.3",
 		"@repo/eslint-config": "*",
+		"@types/lodash.merge": "^4.6.9",
 		"@types/react": "^18.2.6",
 		"@types/react-test-renderer": "^18.0.0",
 		"@vercel/style-guide": "^6.0.0",
 		"babel-jest": "^29.6.3",
 		"eslint": "^9.15.0",
+		"eslint-config-neon": "^0.2.3",
 		"eslint-plugin-react-native": "^4.1.0",
 		"jest": "^29.6.3",
 		"prettier": "2.8.8",

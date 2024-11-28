@@ -1,13 +1,24 @@
-const eslint = require('@eslint/js');
-const tseslint = require('typescript-eslint');
+import common from 'eslint-config-neon/common';
+import prettier from 'eslint-config-neon/prettier';
+import typescript from 'eslint-config-neon/typescript';
+import merge from 'lodash.merge';
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-module.exports = tseslint.config(eslint.configs.recommended, ...tseslint.configs.recommended, {
-	rules: {
-		'@typescript-eslint/no-require-imports': 'off',
-		'no-undef': 'off',
-		'@typescript-eslint/no-unused-vars': 'warn',
-	},
-});
+const baseConfig = [
+	...[...common, ...typescript, ...prettier].map((config) =>
+		merge(config, {
+			ignores: ['**/*.json'],
+			languageOptions: {
+				parserOptions: {
+					project: './tsconfig.json',
+				},
+			},
+			rules: {
+				'@typescript-eslint/no-require-imports': 'off',
+				'no-undef': 'off',
+				'@typescript-eslint/no-unused-vars': 'error',
+			},
+		}),
+	),
+];
+
+module.exports = { baseConfig };
