@@ -6,16 +6,10 @@ import next from 'eslint-config-neon/next';
 import node from 'eslint-config-neon/node';
 import merge from 'lodash.merge';
 
-/**
- * @type {import('eslint').Linter.Config[]}
- *
- */
-const config = [
-	...[...baseConfig, ...reactConfig, ...browser, ...node, ...edge, ...next].map((config) =>
+const config = [...baseConfig, ...reactConfig, ...browser, ...node, ...edge, ...next].map(
+	(config) =>
 		merge(config, {
 			rules: {},
 		}),
-	),
-];
-
+);
 export default config;
