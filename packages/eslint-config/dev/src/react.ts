@@ -21,4 +21,4 @@ const reactConfig = [...react, ...jsx].map((config) =>
 	}),
 );
 
-module.exports = { reactConfig };
+export default reactConfig;

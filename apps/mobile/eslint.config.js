@@ -1,9 +1,8 @@
-import { baseConfig } from '@repo/eslint-config/dist/base.js';
-import { reactConfig } from '@repo/eslint-config/dist/react.js';
-import merge from 'lodash.merge';
+const { baseConfig, reactConfig } = require('@repo/eslint-config');
+const merge = require('lodash.merge');
 
-const config = [...baseConfig, ...reactConfig].map((config) =>
-	merge(config, {
+const config = [...baseConfig, ...reactConfig].map((prevConfig) =>
+	merge(prevConfig, {
 		// plugins: {
 		// 	'react-native': fixupPluginRules(reactNative),
 		// },
@@ -18,4 +17,4 @@ const config = [...baseConfig, ...reactConfig].map((config) =>
 	}),
 );
 
-export default config;
+module.exports = config;

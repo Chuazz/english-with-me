@@ -1,0 +1,35 @@
+{
+   "name": "@repo/eslint-config",
+   "version": "0.0.0",
+   "private": true,
+   "dependencies": {
+      "lodash.merge": "^4.6.2"
+   },
+   "devDependencies": {
+      "@types/lodash.merge": "^4.6.9",
+      "eslint": "^9.15.0",
+      "eslint-config-neon": "^0.2.3",
+      "tsc-watch": "^6.2.1",
+      "typescript": "^5.7.2",
+      "@repo/scripts": "*",
+      "@repo/typescript-config": "*"
+   },
+   "resolutions": {
+      "eslint-config-neon/angular": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/astro": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/browser": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/cypress": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/edge": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/jsx-a11y": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/module": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/next": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/no-deprecated": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/node": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/rxjs": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/rxjs-angular": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/svelte": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/svelte-typescript": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/vue": "npm:@favware/skip-dependency@latest",
+      "eslint-config-neon/vue-typescript": "npm:@favware/skip-dependency@latest"
+   }
+}

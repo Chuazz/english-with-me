@@ -1,0 +1,23 @@
+{
+	"name": "@repo/scripts-dev",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup",
+		"dev:package": "yarn dev",
+		"dev:mobile": "yarn dev",
+		"dev:web": "yarn dev",
+		"build:package": "yarn build"
+	},
+	"bin": {
+		"repo-scripts": "./npm-script.js"
+	},
+	"dependencies": {
+		"glob": "^11.0.0"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.1.0",
+		"tsup": "^8.3.5"
+	}
+}

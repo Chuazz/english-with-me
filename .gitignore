@@ -47,3 +47,7 @@ yarn-error.log*
 # React Native
 .gradle
 .cxx
+
+# Package
+packages/*/package/*
+!packages/*/package/package.json

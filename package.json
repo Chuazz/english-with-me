@@ -3,16 +3,20 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo build",
+		"build:package": "turbo build:package",
 		"dev:mobile": "turbo dev:mobile",
 		"dev:package": "turbo dev:package",
 		"lint": "turbo lint",
 		"format": "prettier --write --config ./.prettierrc ./",
-		"gen-package": "chmod +x ./scripts/generate-package.sh && bash ./scripts/generate-package.sh"
+		"gen-package": "repo-scripts gen-package",
+		"clean-workspace": "repo-scripts clean"
 	},
+	"dependencies": {},
 	"devDependencies": {
 		"prettier": "^3.2.5",
 		"turbo": "^2.3.1",
-		"typescript": "5.5.4"
+		"typescript": "5.5.4",
+		"@repo/scripts": "*"
 	},
 	"engines": {
 		"node": ">=18"
@@ -20,6 +24,7 @@
 	"packageManager": "yarn@1.22.22",
 	"workspaces": [
 		"apps/*",
-		"packages/*"
+		"packages/*/dev",
+		"packages/*/package"
 	]
 }

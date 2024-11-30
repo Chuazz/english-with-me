@@ -1,47 +1,42 @@
 {
-	"name": "web",
-	"version": "0.1.0",
+	"name": "@repo/eslint-config-dev",
+	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbopack",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"dev": "tsc-watch --project ./tsconfig.json --onSuccess \"repo-scripts move-package-json\"",
+		"build": "tsc && repo-scripts move-package-json",
+		"dev:package": "yarn dev",
+		"dev:mobile": "yarn dev",
+		"dev:web": "yarn dev",
+		"build:package": "yarn build"
 	},
 	"dependencies": {
-		"lodash.merge": "^4.6.2",
-		"next": "15.0.3",
-		"react": "19.0.0-rc-66855b96-20241106",
-		"react-dom": "19.0.0-rc-66855b96-20241106"
+		"lodash.merge": "^4.6.2"
 	},
 	"devDependencies": {
-		"@repo/eslint-config": "*",
 		"@types/lodash.merge": "^4.6.9",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
 		"eslint": "^9.15.0",
 		"eslint-config-neon": "^0.2.3",
-		"postcss": "^8",
-		"tailwindcss": "^3.4.1",
-		"typescript": "^5"
+		"tsc-watch": "^6.2.1",
+		"typescript": "^5.7.2",
+		"@repo/scripts": "*",
+		"@repo/typescript-config": "*"
 	},
 	"resolutions": {
-		"eslint-config-neon/common": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/angular": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/astro": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/browser": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/cypress": "npm:@favware/skip-dependency@latest",
-		"eslint-config-neon/jsx": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/edge": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/jsx-a11y": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/module": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/next": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/no-deprecated": "npm:@favware/skip-dependency@latest",
-		"eslint-config-neon/prettier": "npm:@favware/skip-dependency@latest",
-		"eslint-config-neon/react": "npm:@favware/skip-dependency@latest",
+		"eslint-config-neon/node": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/rxjs": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/rxjs-angular": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/svelte": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/svelte-typescript": "npm:@favware/skip-dependency@latest",
-		"eslint-config-neon/typescript": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/vue": "npm:@favware/skip-dependency@latest",
 		"eslint-config-neon/vue-typescript": "npm:@favware/skip-dependency@latest"
 	}

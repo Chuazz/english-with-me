@@ -1,11 +1,8 @@
-import common from 'eslint-config-neon/common';
-import prettier from 'eslint-config-neon/prettier';
 import typescript from 'eslint-config-neon/typescript';
 import merge from 'lodash.merge';
 
-const baseConfig = [...common, ...typescript, ...prettier].map((config) =>
+const typescriptConfig = [...typescript].map((config) =>
 	merge(config, {
-		ignores: ['**/*.json'],
 		languageOptions: {
 			parserOptions: {
 				project: './tsconfig.json',
@@ -13,10 +10,10 @@ const baseConfig = [...common, ...typescript, ...prettier].map((config) =>
 		},
 		rules: {
 			'@typescript-eslint/no-require-imports': 'off',
-			'no-undef': 'off',
 			'@typescript-eslint/no-unused-vars': 'error',
+			'@typescript-eslint/no-var-requires': 'off',
 		},
 	}),
 );
 
-module.exports = { baseConfig };
+export default typescriptConfig;
