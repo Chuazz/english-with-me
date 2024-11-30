@@ -1,7 +1,7 @@
-const { baseConfig, reactConfig } = require('@repo/eslint-config');
+const { baseConfig, reactConfig, typescriptConfig } = require('@repo/eslint-config');
 const merge = require('lodash.merge');
 
-const config = [...baseConfig, ...reactConfig].map((prevConfig) =>
+const config = [...baseConfig, ...reactConfig, ...typescriptConfig].map((prevConfig) =>
 	merge(prevConfig, {
 		// plugins: {
 		// 	'react-native': fixupPluginRules(reactNative),

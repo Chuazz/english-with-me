@@ -16,5 +16,3 @@ if (args[0] === 'gen-package') {
 if (args[0] === 'move-package-json') {
 	movePackageJson();
 }
-
-process.exit(0);

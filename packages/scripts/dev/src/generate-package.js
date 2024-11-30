@@ -13,22 +13,24 @@ const packageContent = (name) => `{
         "dev:web": "yarn dev",
         "build": "tsup"
     },
-    "dependencies": {},
+    "dependencies": {
+		"lodash.merge": "^4.6.2"
+	},
     "devDependencies": {
         "eslint": "^9.15.0",
         "tsup": "^8.3.5",
         "typescript": "5.5.4",
         "@repo/eslint-config": "*",
         "@repo/typescript-config": "*",
-        "@repo/scripts": "*"
+        "@repo/scripts": "*",
+		"@types/lodash.merge": "^4.6.9"
     }
 }
 `;
 
 const tsconfigContent = `{
 	"extends": "@repo/typescript-config/base.json",
-	"include": ["."],
-	"exclude": ["eslint.config.js"]
+	"include": ["src"]
 }
 `;
 
@@ -52,7 +54,9 @@ const eslintConfigContent = `const { baseConfig, typescriptConfig } = require('@
 const merge = require('lodash.merge');
 
 const config = [...baseConfig, ...typescriptConfig].map((prevConfig) =>
-	merge(prevConfig, {}),
+	merge(prevConfig, {
+		rules: {},
+	}),
 );
 
 module.exports = config;
@@ -96,6 +100,8 @@ const genPackage = () => {
 
 		console.log('\u001B[32mCreate package success 😒\u001B[0m');
 		rl.close();
+
+		process.exit(0);
 	});
 };
 

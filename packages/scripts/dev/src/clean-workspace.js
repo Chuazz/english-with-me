@@ -50,6 +50,8 @@ function clean() {
 	cleanRootNodeModules(['turbo-windows-64', '@esbuild', '@rollup']);
 
 	console.log('Hoàn thành việc dọn dẹp!');
+
+	process.exit(0);
 }
 
 module.exports = clean;

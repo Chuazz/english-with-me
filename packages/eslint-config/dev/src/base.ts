@@ -12,6 +12,7 @@ const baseConfig = [...common, ...prettier].map((config) =>
 		},
 		rules: {
 			'no-undef': 'off',
+			'@stylistic/ts/quotes': 'off',
 		},
 	}),
 );

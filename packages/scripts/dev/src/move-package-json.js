@@ -17,6 +17,8 @@ const movePackageJson = async () => {
 	delete packageJson.scripts;
 	packageJson.name = packageJson.name.replace('-dev', '');
 	fs.writeFileSync(destinationPath, JSON.stringify(packageJson, null, 3));
+
+	process.exit(0);
 };
 
 module.exports = movePackageJson;
