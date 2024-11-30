@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const { exit } = require('process');
 
 function getWorkspaces() {
 	const globs = ['apps/*', 'packages/*/dev', 'packages/*/package'];
@@ -39,7 +38,6 @@ function cleanRootNodeModules(exclude) {
 
 function clean() {
 	const workspaces = getWorkspaces();
-	console.log(`Đã tìm thấy ${workspaces.length} workspace(s):`, workspaces);
 
 	for (const workspace of workspaces) {
 		const nodeModulesPath = path.join(workspace, 'node_modules');
